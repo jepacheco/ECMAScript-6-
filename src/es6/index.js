@@ -128,8 +128,7 @@ console.log(calc.sum(2, 2))
 //--------------------------------------------------------
 //Modulos es6
 import { hello } from './module'
-
-hello()
+console.log(hello());
 
 //--------------------------------------------------
 //Generadores
