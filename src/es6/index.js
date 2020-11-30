@@ -92,7 +92,7 @@ const listOfNames4 = name => {
 const square = num => num * num;
 
 //-------------------------------------------------------------
-//Promesas
+//Promesas en es6
 const helloPromise = () => {
     return new Promise((resolve, reject) => {
         if (true) {
@@ -106,3 +106,43 @@ const helloPromise = () => {
 helloPromise()
     .then(response => console.log(response))
     .catch(error => console.log(error))
+
+//--------------------------------------------------------------
+//Clases es6
+class calculator {
+    constructor() {
+        this.valueA = 0
+        this.valueB = 0
+    }
+
+    sum(valueA, valueB) {
+        this.valueA = valueA
+        this.valueB = valueB
+        return this.valueA + this.valueB
+    }
+}
+
+const calc = new calculator()
+console.log(calc.sum(2, 2))
+
+//--------------------------------------------------------
+//Modulos es6
+import { hello } from './module'
+
+hello()
+
+//--------------------------------------------------
+//Generadores
+function* helloWorld() {
+    if (true) {
+        yield 'Hello, '
+    }
+    if (true) {
+        yield 'World'
+    }
+}
+
+const generatorHello = helloWorld()
+console.log(generatorHello.next().value)
+console.log(generatorHello.next().value)
+console.log(generatorHello.next().value)
